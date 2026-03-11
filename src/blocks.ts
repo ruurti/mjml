@@ -187,4 +187,65 @@ export default (editor: Editor, opts: RequiredPluginOptions) => {
     </mj-raw>`,
   });
 
+  addBlock('mj-preview', {
+    label: getI18nLabel('preview'),
+    media: `<svg viewBox="0 0 24 24">
+        <path fill="currentColor" d="M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17M12,4.5C7,4.5 2.73,7.61 1,12C2.73,16.39 7,19.5 12,19.5C17,19.5 21.27,16.39 23,12C21.27,7.61 17,4.5 12,4.5Z" />
+    </svg>`,
+    content: `<mj-preview>Hello World</mj-preview>`,
+  });
+
+  addBlock('mj-table', {
+    label: getI18nLabel('table'),
+    media: `<svg viewBox="0 0 24 24">
+        <path fill="currentColor" d="M5,4H19A2,2 0 0,1 21,6V18A2,2 0 0,1 19,20H5A2,2 0 0,1 3,18V6A2,2 0 0,1 5,4M5,8V12H11V8H5M13,8V12H19V8H13M5,14V18H11V14H5M13,14V18H19V14H13Z" />
+    </svg>`,
+    content: `<mj-table>
+      <tr>
+        <th>Year</th>
+        <th>Language</th>
+        <th>Inspired</th>
+      </tr>
+      <tr>
+        <td>1995</td>
+        <td>PHP</td>
+        <td>C, Shell Unix</td>
+      </tr>
+      <tr>
+        <td>1995</td>
+        <td>JavaScript</td>
+        <td>Scheme, Self</td>
+      </tr>
+    </mj-table>`,
+  });
+
+  addBlock('mj-accordion', {
+    label: getI18nLabel('accordion'),
+    media: `<svg viewBox="0 0 24 24">
+        <path fill="currentColor" d="M3,5H21V8H3V5M3,10H21V13H3V10M3,15H21V18H3V15Z" />
+    </svg>`,
+    content: `<mj-accordion>
+      <mj-accordion-element>
+        <mj-accordion-title>Why use an accordion?</mj-accordion-title>
+        <mj-accordion-text><p>Because it's pretty cool and it allows you to hide some content while you show the most important one.</p></mj-accordion-text>
+      </mj-accordion-element>
+      <mj-accordion-element>
+        <mj-accordion-title>How it works?</mj-accordion-title>
+        <mj-accordion-text><p>CSS is magic. An input[type=radio] triggers the show/hide of an element when it's checked/unchecked.</p></mj-accordion-text>
+      </mj-accordion-element>
+    </mj-accordion>`,
+  });
+
+  addBlock('mj-carousel', {
+    label: getI18nLabel('carousel'),
+    media: `<svg viewBox="0 0 24 24">
+        <path fill="currentColor" d="M2,6H4V18H2V6M5,6H19V18H5V6M20,6H22V18H20V6M19,7H6V17H19V7Z" />
+    </svg>`,
+    content: `<mj-carousel>
+      <mj-carousel-image src="${imagePlaceholderSrc}" />
+      <mj-carousel-image src="${imagePlaceholderSrc}" />
+      <mj-carousel-image src="${imagePlaceholderSrc}" />
+    </mj-carousel>`,
+  });
+
 };

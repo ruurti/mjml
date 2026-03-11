@@ -10,6 +10,9 @@ import { type as typeDivider } from './Divider';
 import { type as typeNavbar } from './NavBar';
 import { type as typeSocial } from './Social';
 import { type as typeSpacer } from './Spacer';
+import { type as typeTable } from './Table';
+import { type as typeAccordion } from './Accordion';
+import { type as typeCarousel } from './Carousel';
 
 export const type = 'mj-hero';
 
@@ -21,7 +24,7 @@ export default (editor: Editor, { coreMjmlModel, coreMjmlView }: ComponentPlugin
       defaults: {
         name: getName(editor, 'hero'),
         draggable: componentsToQuery(typeBody),
-        droppable: componentsToQuery([typeText, typeButton, typeImage, typeDivider, typeNavbar, typeSocial, typeSpacer]),
+        droppable: componentsToQuery([typeText, typeButton, typeImage, typeDivider, typeNavbar, typeSocial, typeSpacer, typeTable, typeAccordion, typeCarousel]),
         stylable: [
           'background-color', 'background-height', 'background-position', 'background-url',
           'background-width', 'css-class', 'height', 'mode', 'padding', 'padding-top',

@@ -48,6 +48,10 @@ const expectedBlocks = [
   "mj-hero",
   "mj-wrapper",
   "mj-raw",
+  "mj-preview",
+  "mj-table",
+  "mj-accordion",
+  "mj-carousel",
 ];
 
 describe("mjml tests", () => {
