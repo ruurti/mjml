@@ -30,6 +30,14 @@ Supported MJML components (using default mjml-browser parser):
 `mj-navbar`
 `mj-navbar-link`
 `mj-raw`
+`mj-preview`
+`mj-table`
+`mj-accordion`
+`mj-accordion-element`
+`mj-accordion-title`
+`mj-accordion-text`
+`mj-carousel`
+`mj-carousel-image`
 
 
 ## Options

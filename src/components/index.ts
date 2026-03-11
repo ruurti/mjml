@@ -20,6 +20,10 @@ import loadNavBar from './NavBar';
 import loadNavBarLink from './NavBarLink';
 import loadHero from './Hero';
 import loadRaw from './Raw';
+import loadPreview from './Preview';
+import loadTable from './Table';
+import loadAccordion from './Accordion';
+import loadCarousel from './Carousel';
 import { RequiredPluginOptions, PluginOptions } from '..';
 
 export type ComponentPluginOptions = {
@@ -315,6 +319,10 @@ export default (editor: Editor, opt: RequiredPluginOptions) => {
     loadNavBarLink,
     loadHero,
     loadRaw,
+    loadPreview,
+    loadTable,
+    loadAccordion,
+    loadCarousel,
     ...opt.customComponents,
   ].forEach((module) => module(editor, compOpts));
 };
