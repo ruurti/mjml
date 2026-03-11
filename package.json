@@ -3,11 +3,14 @@
   "version": "1.0.7",
   "description": "MJML Componenets integration in GrapesJS",
   "main": "dist/index.js",
+  "module": "dist/index.min.js",
+  "browser": "dist/index.min.js",
+  "typings": "dist/index.d.ts",
   "scripts": {
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
     "v:patch": "npm version patch -m \"Release v%s\"",
-    "build": "grapesjs-cli build --patch=false",
+    "build": "node scripts/build.js",
     "start": "grapesjs-cli serve",
     "test": "jest"
   },
@@ -43,15 +46,24 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.20.12",
+    "@babel/plugin-transform-runtime": "^7.19.6",
+    "@babel/preset-env": "^7.20.2",
     "@babel/preset-typescript": "^7.16.7",
     "@types/jest": "^29.5.12",
     "ajv": "^8.12.0",
+    "babel-loader": "^9.1.2",
+    "dts-bundle-generator": "^6.0.0",
     "eslint": "^8.23.0",
     "grapesjs": "^0.21.2",
     "grapesjs-cli": "^4.1.1",
     "jest": "^24.9.0",
     "regenerator-runtime": "^0.14.1",
+    "terser-webpack-plugin": "^5.3.9",
+    "ts-loader": "^9.4.2",
     "underscore": "^1.13.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
     "whatwg-fetch": "^3.6.2"
   }
 }

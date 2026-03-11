@@ -39,7 +39,7 @@ export default {
         spacer: 'Espaçamento',
         text: 'Texto',
         wrapper: 'Wrapper',
-        raw: 'Cru para',
+        raw: 'Cru',
         preview: 'Pré-visualização',
         table: 'Tabela',
         accordion: 'Acordeão',
