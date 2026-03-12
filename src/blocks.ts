@@ -3,7 +3,7 @@ import { RequiredPluginOptions } from '.';
 
 export default (editor: Editor, opts: RequiredPluginOptions) => {
   const { Blocks } = editor;
-  const imagePlaceholderSrc = opts.imagePlaceholderSrc || 'https://via.placeholder.com/350x250/78c5d6/fff';
+  const imagePlaceholderSrc = opts.imagePlaceholderSrc || 'https://placehold.co/350x250/78c5d6/fff';
   const socialIcon = `<svg viewBox="0 0 24 24">
     <path fill="currentColor" d="M18,16.08C17.24,16.08 16.56,16.38 16.04,16.85L8.91,12.7C8.96,12.47 9,12.24 9,12C9,11.76 8.96,11.53 8.91,11.3L15.96,7.19C16.5,7.69 17.21,8 18,8A3,3 0 0,0 21,5A3,3 0 0,0 18,2A3,3 0 0,0 15,5C15,5.24 15.04,5.47 15.09,5.7L8.04,9.81C7.5,9.31 6.79,9 6,9A3,3 0 0,0 3,12A3,3 0 0,0 6,15C6.79,15 7.5,14.69 8.04,14.19L15.16,18.34C15.11,18.55 15.08,18.77 15.08,19C15.08,20.61 16.39,21.91 18,21.91C19.61,21.91 20.92,20.61 20.92,19A2.92,2.92 0 0,0 18,16.08Z" />
   </svg>`;
@@ -200,23 +200,24 @@ export default (editor: Editor, opts: RequiredPluginOptions) => {
     media: `<svg viewBox="0 0 24 24">
         <path fill="currentColor" d="M5,4H19A2,2 0 0,1 21,6V18A2,2 0 0,1 19,20H5A2,2 0 0,1 3,18V6A2,2 0 0,1 5,4M5,8V12H11V8H5M13,8V12H19V8H13M5,14V18H11V14H5M13,14V18H19V14H13Z" />
     </svg>`,
-    content: `<mj-table>
-      <tr>
-        <th>Year</th>
-        <th>Language</th>
-        <th>Inspired</th>
+    content: {
+      type: 'mj-table',
+      content: `<tr style="border-bottom:1px solid #ecedee;text-align:left;padding:15px 0;">
+        <th style="padding: 0 15px 0 0;">Year</th>
+        <th style="padding: 0 15px;">Language</th>
+        <th style="padding: 0 0 0 15px;">Inspired from</th>
       </tr>
       <tr>
-        <td>1995</td>
-        <td>PHP</td>
-        <td>C, Shell Unix</td>
+        <td style="padding: 0 15px 0 0;">1995</td>
+        <td style="padding: 0 15px;">PHP</td>
+        <td style="padding: 0 0 0 15px;">C, Shell Unix</td>
       </tr>
       <tr>
-        <td>1995</td>
-        <td>JavaScript</td>
-        <td>Scheme, Self</td>
-      </tr>
-    </mj-table>`,
+        <td style="padding: 0 15px 0 0;">1995</td>
+        <td style="padding: 0 15px;">JavaScript</td>
+        <td style="padding: 0 0 0 15px;">Scheme, Self</td>
+      </tr>`,
+    },
   });
 
   addBlock('mj-accordion', {
@@ -242,10 +243,10 @@ export default (editor: Editor, opts: RequiredPluginOptions) => {
         <path fill="currentColor" d="M2,6H4V18H2V6M5,6H19V18H5V6M20,6H22V18H20V6M19,7H6V17H19V7Z" />
     </svg>`,
     content: `<mj-carousel>
-      <mj-carousel-image src="${imagePlaceholderSrc}" />
-      <mj-carousel-image src="${imagePlaceholderSrc}" />
-      <mj-carousel-image src="${imagePlaceholderSrc}" />
-    </mj-carousel>`,
+          <mj-carousel-image src="https://static.mailjet.com/mjml-website/documentation/carousel-1.jpg"></mj-carousel-image>
+          <mj-carousel-image src="https://static.mailjet.com/mjml-website/documentation/carousel-2.jpg"></mj-carousel-image>
+          <mj-carousel-image src="https://static.mailjet.com/mjml-website/documentation/carousel-3.jpg"></mj-carousel-image>
+        </mj-carousel>`,
   });
 
 };
